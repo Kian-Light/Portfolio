@@ -1,4 +1,4 @@
-/* --- Colours --- */
+/* --- Colours & Design Tokens --- */
 :root {
     --primary: #0f172a;       /* Deep ink/slate */
     --accent: #0284c7;        /* Focused technical blue */
@@ -9,13 +9,20 @@
     --border: #e2e8f0;        /* Fine-line structure border */
 }
 
-/* --- Layout --- */
+/* --- Base & Engineering Grid (Idea 1) --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.65;
     color: var(--text-main);
+    
+    /* Technical 40px grid pattern overlay */
     background-color: var(--bg);
-    max-width: 800px; /* Snugger width feels more like an article or report */
+    background-image: 
+        linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+        linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+    background-size: 40px 40px;
+    
+    max-width: 820px; 
     margin: 0 auto;
     padding: 60px 24px;
     -webkit-font-smoothing: antialiased;
@@ -23,18 +30,17 @@ body {
 
 /* --- Header --- */
 header {
-    background: transparent; /* Removed the heavy AI-style gradient box */
-    color: var(--primary);   /* Explicitly sets text to deep slate */
-    padding: 0 0 40px 0;
-    text-align: left; /* Left-aligned typography feels intentional and editorial */
+    background: transparent; 
+    color: var(--primary);
+    padding: 0 0 35px 0;
+    text-align: left; 
     border-bottom: 2px solid var(--primary);
     margin-bottom: 40px;
-    box-shadow: none;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 800;
     letter-spacing: -0.03em;
 }
@@ -46,61 +52,75 @@ header .subtitle {
     color: var(--text-muted);
 }
 
-/* --- Header Links (Email & LinkedIn Fixes) --- */
+/* Metadata formatting (Monospace data style) */
+header p[style*="margin"] {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 0.85rem !important;
+    color: var(--text-muted);
+}
+
+/* --- Header Links --- */
 header a {
-    color: var(--accent) !important; /* Forces links to display in technical blue over the white background */
+    color: var(--accent) !important; 
     text-decoration: underline;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
 }
 
 header a:hover {
-    color: var(--primary) !important; /* Elegant shift to deep slate on hover */
+    color: var(--primary) !important;
 }
 
-/* --- PDF Button --- */
+/* --- Interactive Download Button --- */
 .download-btn {
     display: inline-block;
     background-color: var(--primary);
-    color: white !important; /* Keeps button text white against the dark button */
+    color: white !important; 
     padding: 10px 20px;
     margin-top: 16px;
-    border-radius: 4px; /* Structured, geometric corners instead of pill shapes */
+    border-radius: 4px; 
     text-decoration: none !important;
     font-weight: 600;
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
-    box-shadow: none; /* Removed soft glow drop-shadows */
 }
 
 .download-btn:hover {
     background-color: var(--accent);
 }
 
-/* --- Layout Sections --- */
+/* --- Live DevLog Map Legend Container (Idea 2) --- */
+.devlog-banner, section[style*="background: #fff0f2"] {
+    /* Clears inline overrides from old code */
+    background: #fffbfa !important;
+    border: 1px solid #fecdd3 !important;
+    border-left: 4px solid #e11d48 !important; 
+    padding: 24px !important;
+    border-radius: 4px !important;
+    margin-bottom: 40px !important;
+}
+
+/* --- Global Section Containers --- */
 section, main section {
     background: transparent;
     padding: 0;
     border-radius: 0;
     margin-bottom: 48px;
-    box-shadow: none;
-    border: none; /* Dropped the boxed-card layout container look */
+    border: none;
 }
 
 h2 {
     color: var(--primary);
-    font-size: 1.4rem;
+    font-size: 0.95rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-    text-transform: uppercase; /* Feels structural, like an engineering spec */
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    text-transform: uppercase; 
+    letter-spacing: 0.06em;
     border-bottom: 1px solid var(--border);
     padding-bottom: 8px;
 }
 
-/* --- Skills List --- */
+/* --- Technical Skills Badges (Monospace Style) --- */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -113,39 +133,39 @@ h2 {
 .skills-grid li {
     background: var(--surface);
     color: var(--primary);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.82rem;
     padding: 6px 14px;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 0.85rem;
     border: 1px solid var(--border);
+    transition: all 0.15s ease;
 }
 
 .skills-grid li:hover {
-    background-color: #f1f5f9;
+    background-color: #ffffff;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
-/* --- Project Cards --- */
+/* --- Technical Border Accent Cards (Idea 4) --- */
 .project-card {
     background: transparent;
-    border-left: none; 
-    padding: 0;
-    margin-top: 24px;
-    border-bottom: 1px dashed var(--border); /* Dotted dividers instead of massive blocks */
-    padding-bottom: 24px;
-}
-
-.project-card:last-of-type {
-    border-bottom: none;
+    border-left: 2px solid var(--border); /* Simple structural vertical tracking line */
+    padding: 0 0 8px 20px;
+    margin: 28px 0 0 0;
+    transition: border-left-color 0.2s ease;
 }
 
 .project-card:hover {
-    transform: none; /* Disabled floating card effect */
+    border-left-color: var(--accent); /* Edge turns blue natively on hover */
 }
 
 .project-card h3 {
     margin: 0 0 6px 0;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .project-card h3 a {
@@ -155,29 +175,33 @@ h2 {
 
 .project-card h3 a:hover {
     color: var(--accent);
-    text-decoration: underline;
 }
 
 .project-card p {
     margin: 0;
     color: var(--text-main);
-    font-size: 0.95rem;
+    font-size: 0.96rem;
 }
 
-/* --- Global Sub-Pages Setup --- */
+/* --- Sub-page Timeline / Markdown Content Adjustments --- */
+.timeline-item .timestamp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.8rem;
+}
+
 ul:not(.skills-grid) {
     padding-left: 20px;
 }
 
 ul:not(.skills-grid) li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 main a[href="index.html"] {
     display: inline-block;
     color: var(--text-muted);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 24px;
     font-size: 0.9rem;
 }
