@@ -28,6 +28,3 @@ Developing an R and QGIS workflow for automated watershed delineation, stream ex
 - Statistical Analysis
 - Water Quality Monitoring
 
-## CV
-
-[Download CV](cv/Kian_Light_CV.pdf)
