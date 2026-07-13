@@ -13,20 +13,20 @@
         <p class="subtitle">Landscape composition, configuration, and cumulative pollution along an urban river continuum</p>
     </header>
 
-    <main style="max-width: 850px; margin: 0 auto; padding: 20px;">
-        <p><a href="index.html" style="color: #457b9d; text-decoration: none; font-weight: bold;">← Back to Homepage</a></p>
+    <main>
+        <p><a href="index.html">← Back to Homepage</a></p>
 
-        <section>
+        <section class="project-card">
             <h2>Project Overview</h2>
             <p>
                 Presented as part of my B.Sc. in Geography at the University of Bristol, this research integrated landscape ecology frameworks with empirical water quality assessments to evaluate the River Avon (Bristol) catchment. 
             </p>
             <p>
-                While research traditionally focus on land use <em>composition</em> (proportion of land use types present), this project assessed how spatial <em>configuration</em> (the fragmentation and arrangement of land use patches) and composition influences water quality variation along an urban river continuum.
+                While research traditionally focuses on land use <em>composition</em> (proportion of land use types present), this project assessed how spatial <em>configuration</em> (the fragmentation and arrangement of land use patches) and composition influences water quality variation along an urban river continuum.
             </p>
         </section>
 
-        <section>
+        <section class="project-card">
             <h2>Methodology & GIS/R Workflow</h2>
             <p>
                 The project combined primary data, acquired historical datasets, spatial modeling in GIS, and multivariate statistical analysis in R:
@@ -40,9 +40,8 @@
             </ul>
         </section>
 
-        <section>
+        <section class="project-card">
             <h2>Key Findings</h2>
-           
             <ul>
                 <li><strong>Urban Influence:</strong> Urban land cover was identified as the dominant multivariate predictor of water quality degradation, accounting for 42.55% of the observed variation.</li>
                 <li><strong>Suburban Gradient:</strong> In the historical dataset, suburban percentage cover was identified as the only significant compositional predictor of water quality (rho = -0.893, p = 0.012).</li>
@@ -52,18 +51,21 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Spatial Visualisations</h2>
-            <p>The GIS analysis mapped Nitrate Vulnerable Zones (NVZs), Combined Sewage Overflow (CSO) locations, and riparian buffers across the River Avon catchment to model surface run-off impacts.</p>
+        <section class="project-card">
+            <h2>Study Area & Data Acquisition</h2>
+            <p>To analyze the spatial footprint on the River Avon catchment, core geographic datasets were compiled across major urban and rural tributaries, mapping dedicated environmental monitoring stations along the Trym, Frome, and Malago stream networks.</p>
             
-            <div style="background: #f4f6f9; border: 2px dashed #cbd5e1; padding: 30px; text-align: center; border-radius: 8px; margin-top: 20px;">
-                <p style="margin: 0; color: #64748b; font-weight: bold;">🗺️ [Interactive Map / Static Export Placement]</p>
-                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: #94a3b8;">You can export your QGIS map layouts (such as your sample sites or NVZ maps) as PNGs and display them here!</p>
-            </div>
+            <img src="images/FOISAMPLESITES.jpg" alt="River Avon Catchment and FOI Sample Sites Map" style="width: 100%; max-width: 750px; height: auto; margin-top: 15px; border-radius: 4px; border: 1px solid var(--border);">
+        </section>
+
+        <section class="project-card">
+            <h2>Spatial Analysis & Proximity Modeling</h2>
+            <p>Using proximity buffering tools and multi-layered vector intersections, environmental land-use variables—ranging from broadleaved woodland and improved grassland to suburban zones—were isolated, clipped, and quantified within strict distance intervals surrounding target riparian corridors.</p>
+            
+            <img src="images/bufferexample.jpg" alt="GIS Land Use Buffer Analysis Diagram" style="width: 100%; max-width: 750px; height: auto; margin-top: 15px; border-radius: 4px; border: 1px solid var(--border);">
         </section>
 
     </main>
 
 </body>
-</html>
 </html>
