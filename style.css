@@ -79,3 +79,20 @@ h2 {
     margin: 0 0 10px 0;
     color: #457b9d;
 }
+
+/* CV Download Button styling */
+.download-btn {
+    display: inline-block;
+    background-color: #cbd5e1; /* Soft gray/blue */
+    color: #1d3557; /* Deep slate blue */
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f1f5f9; /* Brightens up when hovered */
+}
