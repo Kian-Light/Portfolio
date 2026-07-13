@@ -1,164 +1,182 @@
-/* --- Modern Nature-Tech CSS Palette --- */
+    /* --- Colours --- */
 :root {
-    --primary: #1e3d59;       /* Deep Slate/River Blue */
-    --secondary: #17b978;     /* Environmental Green (Accent) */
-    --bg-light: #f5f7fa;      /* Off-White Canvas */
-    --card-bg: #ffffff;       /* Pure White Cards */
-    --text-main: #2b3a42;     /* Charcoal/Navy Text */
-    --text-muted: #657786;    /* Secondary Text */
-    --border-color: #e1e8ed;  /* Clean Dividers */
+    --primary: #0f172a;       /* Deep ink/slate */
+    --accent: #0284c7;        /* Focused technical blue */
+    --bg: #ffffff;            /* Clean white canvas */
+    --surface: #f8fafc;       /* Subtle structure fill */
+    --text-main: #1e293b;     /* Dark slate for body */
+    --text-muted: #64748b;    /* Clean gray for secondary text */
+    --border: #e2e8f0;        /* Fine-line structure border */
 }
 
-/* --- Base Styles --- */
+/* --- Layout --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--text-main);
-    background-color: var(--bg-light);
-    max-width: 900px;
+    background-color: var(--bg);
+    max-width: 800px; /* Snugger width feels more like an article or report */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 24px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- Header Styling --- */
+/* --- Header --- */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, #112233 100%);
-    color: white;
-    padding: 50px 40px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(30, 61, 89, 0.15);
+    background: transparent; /* Removed the heavy AI-style gradient box */
+    color: var(--primary);
+    padding: 0 0 40px 0;
+    text-align: left; /* Left-aligned typography feels intentional and editorial */
+    border-bottom: 2px solid var(--primary);
     margin-bottom: 40px;
+    box-shadow: none;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.03em;
 }
 
-.subtitle {
-    margin: 12px 0 0 0;
-    font-size: 1.25rem;
-    font-weight: 400;
-    opacity: 0.9;
-    letter-spacing: 0.2px;
+header .subtitle {
+    margin: 8px 0 0 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-muted);
 }
 
-/* --- Interactive CV Download Button --- */
+/* --- Text Links & PDF Button --- */
+header a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
 .download-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--secondary);
-    color: white;
-    padding: 12px 24px;
-    margin-top: 25px;
-    border-radius: 30px;
+    display: inline-block;
+    background-color: var(--primary);
+    color: white !important;
+    padding: 10px 20px;
+    margin-top: 16px;
+    border-radius: 4px; /* Structured, geometric corners instead of pill shapes */
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(23, 185, 120, 0.3);
-    transition: all 0.25s ease-in-out;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    box-shadow: none; /* Removed soft glow drop-shadows */
 }
 
 .download-btn:hover {
-    background-color: #149e66;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(23, 185, 120, 0.4);
+    background-color: var(--accent);
 }
 
 /* --- Layout Sections --- */
-section {
-    background: var(--card-bg);
-    padding: 35px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    border: 1px solid var(--border-color);
+section, main section {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 48px;
+    box-shadow: none;
+    border: none; /* Dropped the boxed-card layout container look */
 }
 
 h2 {
     color: var(--primary);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--bg-light);
+    letter-spacing: -0.02em;
+    text-transform: uppercase; /* Feels structural, like an engineering spec */
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
 }
 
-/* --- Technical Skills Badges --- */
+/* --- Skills List --- */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .skills-grid li {
-    background: var(--bg-light);
+    background: var(--surface);
     color: var(--primary);
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid var(--border-color);
-    transition: all 0.2s ease;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
 }
 
 .skills-grid li:hover {
-    border-color: var(--primary);
-    background-color: #eef3f7;
+    background-color: #f1f5f9;
 }
 
 /* --- Project Cards --- */
 .project-card {
-    background: var(--bg-light);
-    border-left: 5px solid var(--primary);
-    padding: 24px;
-    margin-top: 20px;
-    border-radius: 0 12px 12px 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: transparent;
+    border-left: none; 
+    padding: 0;
+    margin-top: 24px;
+    border-bottom: 1px dashed var(--border); /* Dotted dividers instead of massive blocks */
+    padding-bottom: 24px;
+}
+
+.project-card:last-of-type {
+    border-bottom: none;
 }
 
 .project-card:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: none; /* Disabled floating card effect */
 }
 
 .project-card h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.3rem;
+    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .project-card h3 a {
     color: var(--primary);
     text-decoration: none;
-    transition: color 0.2s;
 }
 
 .project-card h3 a:hover {
-    color: var(--secondary);
+    color: var(--accent);
     text-decoration: underline;
 }
 
 .project-card p {
     margin: 0;
-    color: var(--text-muted);
-    font-size: 0.98rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
 }
 
-/* --- General Navigation Links --- */
+/* --- Global Sub-Pages Setup --- */
+ul:not(.skills-grid) {
+    padding-left: 20px;
+}
+
+ul:not(.skills-grid) li {
+    margin-bottom: 8px;
+}
+
 main a[href="index.html"] {
     display: inline-block;
-    color: var(--primary);
+    color: var(--text-muted);
     text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    transition: color 0.2s;
+    font-weight: 500;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
 }
 
 main a[href="index.html"]:hover {
-    color: var(--secondary);
+    color: var(--primary);
+    text-decoration: underline;
 }
