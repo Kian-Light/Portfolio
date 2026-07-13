@@ -1,4 +1,4 @@
-    /* --- Colours --- */
+/* --- Colours --- */
 :root {
     --primary: #0f172a;       /* Deep ink/slate */
     --accent: #0284c7;        /* Focused technical blue */
@@ -24,7 +24,7 @@ body {
 /* --- Header --- */
 header {
     background: transparent; /* Removed the heavy AI-style gradient box */
-    color: var(--primary);
+    color: var(--primary);   /* Explicitly sets text to deep slate */
     padding: 0 0 40px 0;
     text-align: left; /* Left-aligned typography feels intentional and editorial */
     border-bottom: 2px solid var(--primary);
@@ -46,20 +46,26 @@ header .subtitle {
     color: var(--text-muted);
 }
 
-/* --- Text Links & PDF Button --- */
+/* --- Header Links (Email & LinkedIn Fixes) --- */
 header a {
-    color: var(--accent);
-    text-decoration: none;
+    color: var(--accent) !important; /* Forces links to display in technical blue over the white background */
+    text-decoration: underline;
+    transition: color 0.2s ease;
 }
 
+header a:hover {
+    color: var(--primary) !important; /* Elegant shift to deep slate on hover */
+}
+
+/* --- PDF Button --- */
 .download-btn {
     display: inline-block;
     background-color: var(--primary);
-    color: white !important;
+    color: white !important; /* Keeps button text white against the dark button */
     padding: 10px 20px;
     margin-top: 16px;
     border-radius: 4px; /* Structured, geometric corners instead of pill shapes */
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 600;
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
