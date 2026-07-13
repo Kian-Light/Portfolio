@@ -1,3 +1,8 @@
+Here is your completed homepage HTML (`index.html`).
+
+I have integrated your professional introduction directly beneath the header contact links. To keep your code perfectly clean, I also removed the duplicate `</body></html>` tags from the very bottom of your file and ensured all structural elements nest correctly.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +15,23 @@
 
     <header>
         <h1>Kian Light</h1>
-       <p style="margin: 10px 0 0 0; font-size: 0.95rem; opacity: 0.85;">
-    Cheshire, UK &nbsp;|&nbsp; 
-    <a href="mailto:kian.light@hotmail.com" style="color: white; text-decoration: underline;">kian.light@hotmail.com</a> &nbsp;|&nbsp; 
-    <a href="https://www.linkedin.com/in/kian-light-3a7100399/" target="_blank" style="color: white; text-decoration: underline;">LinkedIn Profile</a>
-</p>
+        <p style="margin: 10px 0 0 0; font-size: 0.95rem; opacity: 0.85;">
+            Cheshire, UK &nbsp;|&nbsp; 
+            <a href="mailto:kian.light@hotmail.com" style="color: white; text-decoration: underline;">kian.light@hotmail.com</a> &nbsp;|&nbsp; 
+            <a href="https://www.linkedin.com/in/kian-light-3a7100399/" target="_blank" style="color: white; text-decoration: underline;">LinkedIn Profile</a>
+        </p>
+        <p><a href="KianLight_cv_.pdf" class="download-btn" target="_blank">Download CV (PDF)</a></p>
+    </header>
 
-    <p><a href="KianLight_cv_.pdf" class="download-btn" target="_blank">Download CV (PDF)</a></p>
-</header>
-<section style="background: #fff0f2; border: 1px solid #ffccd5; border-left: 6px solid #ff4757; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+    <section id="about" style="margin-bottom: 30px; line-height: 1.6;">
+        <p style="font-size: 1.1rem; color: var(--text-main, #2d3748); margin: 0;">
+            Geography B.Sc. (Hons) graduate specialising in freshwater systems, GIS, and environmental data analysis. 
+            Experienced in applying spatial analysis, field monitoring and statistical modelling to investigate 
+            environmental challenges including water quality degradation, flood exposure, and pollution.
+        </p>
+    </section>
+
+    <section style="background: #fff0f2; border: 1px solid #ffccd5; border-left: 6px solid #ff4757; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
         <h3 style="margin: 0 0 5px 0; color: #ff4757; display: flex; align-items: center; gap: 8px;">
             <span>🔴</span> Live Project Progress Tracker
         </h3>
@@ -26,6 +39,7 @@
             I am currently expanding my GIS skills. You can review my active sprints, progress updates, and code logs on my <a href="progress.html" style="color: #ff4757; font-weight: bold; text-decoration: underline;">Live DevLog Page</a>.
         </p>
     </section>
+
     <section id="skills">
         <h2>Technical Skills</h2>
         <ul class="skills-grid">
@@ -44,7 +58,7 @@
         
         <div class="project-card">
             <h3><a href="avon.html">1. River Avon Water Quality Assessment</a></h3>
-            <p><strong>Undergraduate Dissertation:</strong> UG dissertation investigating influence of landscape configuration and composition upon surface water quality within the River Avon catchemnt, utilising landscape ecology metrics and an adapted 9 parametre WQI.</p>
+            <p><strong>Undergraduate Dissertation:</strong> UG dissertation investigating influence of landscape configuration and composition upon surface water quality within the River Avon catchment, utilising landscape ecology metrics and an adapted 9 parameter WQI.</p>
         </div>
 
         <div class="project-card">
@@ -64,5 +78,6 @@
     </section>
 
 </body>
-</html></body>
 </html>
+
+```
