@@ -7,6 +7,11 @@
     --text-main: #1e293b;     /* Dark slate for body */
     --text-muted: #64748b;    /* Clean gray for secondary text */
     --border: #e2e8f0;        /* Fine-line structure border */
+    
+    /* Dedicated State Management Tokens */
+    --state-progress: #e11d48; /* Crisp Red for In Progress */
+    --state-review: #f59e0b;   /* Technical Amber for Under Review */
+    --state-complete: #10b981; /* Engineering Green for Completed */
 }
 
 /* --- Base & Engineering Grid (Idea 1) --- */
@@ -90,10 +95,9 @@ header a:hover {
 
 /* --- Live DevLog Map Legend Container (Idea 2) --- */
 .devlog-banner, section[style*="background: #fff0f2"] {
-    /* Clears inline overrides from old code */
     background: #fffbfa !important;
     border: 1px solid #fecdd3 !important;
-    border-left: 4px solid #e11d48 !important; 
+    border-left: 4px solid var(--state-progress) !important; 
     padding: 24px !important;
     border-radius: 4px !important;
     margin-bottom: 40px !important;
@@ -151,14 +155,14 @@ h2 {
 /* --- Technical Border Accent Cards (Idea 4) --- */
 .project-card {
     background: transparent;
-    border-left: 2px solid var(--border); /* Simple structural vertical tracking line */
+    border-left: 2px solid var(--border);
     padding: 0 0 8px 20px;
     margin: 28px 0 0 0;
     transition: border-left-color 0.2s ease;
 }
 
 .project-card:hover {
-    border-left-color: var(--accent); /* Edge turns blue natively on hover */
+    border-left-color: var(--accent);
 }
 
 .project-card h3 {
@@ -218,11 +222,10 @@ main a[href="index.html"]:hover {
     margin-top: 24px;
 }
 
-/* The vertical tracking line */
 .timeline-container::before {
     content: '';
     position: absolute;
-    left: 7px; /* Perfectly aligns line with the center of a 16px wide circle */
+    left: 7px;
     top: 8px;
     bottom: 8px;
     width: 2px;
@@ -230,11 +233,10 @@ main a[href="index.html"]:hover {
     z-index: 1;
 }
 
-/* Individual status rows */
 .timeline-item {
     position: relative;
     display: flex;
-    align-items: flex-start; /* Keeps text flowing naturally from the top */
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
@@ -242,30 +244,40 @@ main a[href="index.html"]:hover {
     margin-bottom: 0;
 }
 
-/* The Progress Indicator Circles */
 .timeline-badge {
     position: absolute;
-    left: -32px; /* Pulls it back onto the line container */
-    top: 4px;    /* Micro-adjusted to perfectly align with the first line of text */
+    left: -32px;
+    top: 4px;   
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: #ffffff;
     border: 2px solid var(--text-muted);
-    z-index: 2; /* Sits cleanly on top of the vertical line */
+    z-index: 2;
     box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
-/* Status variants for your tracking nodes */
-.timeline-badge.completed {
-    background-color: var(--accent);
-    border-color: var(--accent);
-}
+/* --- Re-Engineered Workflow State Styles --- */
 
+/* 🔴 Stage 1: In Progress */
 .timeline-badge.in-progress {
     background-color: #ffffff;
-    border-color: #e11d48; /* Crimson red accent to match live banner pulse */
-    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15); /* Soft technical glow */
+    border-color: var(--state-progress);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
+}
+
+/* 🟡 Stage 2: Under Review */
+.timeline-badge.under-review {
+    background-color: #ffffff;
+    border-color: var(--state-review);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+/* 🟢 Stage 3: Completed */
+.timeline-badge.completed {
+    background-color: var(--state-complete);
+    border-color: var(--state-complete);
 }
 
 /* Content block alignment */
