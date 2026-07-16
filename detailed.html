@@ -160,7 +160,7 @@
 
         <main>
             <section>
-                <h2>1. What Has Been Completed <span class="badge done">Done</span></h2>
+                <h2>1. Sub tasks <span class="badge done">Done</span></h2>
                 <ul>
                     <li><strong>Data Integration:</strong> Sourced raw regional DEM tiles and reprojected all spatial data frames to standard metric coordinate system (<code>EPSG:27700</code> / British National Grid).</li>
                     <li><strong>Bridge Environment Connected:</strong> Established communication between R and QGIS/GRASS via <code>qgisprocess::qgis_configure()</code> utilizing the <code>grass:r.watershed</code> algorithm.</li>
@@ -168,7 +168,7 @@
             </section>
 
             <section>
-                <h2>2. Technical Task: Flow Accumulation Prototyping <span class="badge done">Done</span></h2>
+                <h2>2. Flow Accumulation Prototyping <span class="badge done">Done</span></h2>
                 <p>To justify threshold selection prior to running the master batch loop, I ran a sensitivity analysis using a 50m buffer against OS Open Rivers. I benchmarked Multiple Flow Direction (MFD) against Single Flow Direction (D8) routing at a 120,000 cell threshold:</p>
 
                 <table>
