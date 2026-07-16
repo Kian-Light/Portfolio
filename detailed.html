@@ -73,6 +73,34 @@
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
         }
+        
+        /* CSS Grid for Visual Diagnostics */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .image-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #f1f5f9;
+        }
+        .image-card p {
+            margin: 10px 0 0 0;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -82,7 +110,6 @@
         
         <header>
             <h1>Phase 2 Deep-Dive: Sensitivity Analysis & Prototyping</h1>
-            <p style="color: #64748b; margin: 5px 0 0 0;">An evaluation of DEM flow-routing algorithms and threshold verification against OS Open Rivers.</p>
         </header>
 
         <main>
@@ -90,13 +117,13 @@
                 <h2>1. What Has Been Completed <span class="badge done">Done</span></h2>
                 <ul>
                     <li><strong>Data Integration:</strong> Successfully sourced raw regional DEM tiles and reprojected all spatial data frames to standard metric coordinate system (<code>EPSG:27700</code> / British National Grid).</li>
-                    <li><strong>Bridge Environment Connected:</strong> Fully established communication between R and QGIS/GRASS via <code>qgisprocess::qgis_configure()</code> utilizing the <code>grass:r.watershed</code> algorithm.</li>
+                    <li><strong>Bridge Environment Connected:</strong> Established communication between R and QGIS/GRASS via <code>qgisprocess::qgis_configure()</code> utilizing the <code>grass:r.watershed</code> algorithm.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>2. Current Technical Task: Flow Accumulation Prototyping <span class="badge">Active</span></h2>
-                <p>To justify threshold selection prior to running the master batch loop, we ran a thorough sensitivity analysis using a 50m buffer against OS Open Rivers. We benchmarked Multiple Flow Direction (MFD) against Single Flow Direction (D8) routing at a 120,000 cell threshold:</p>
+                <p>To justify threshold selection prior to running the master batch loop, I ran a thorough sensitivity analysis using a 50m buffer against OS Open Rivers. I benchmarked Multiple Flow Direction (MFD) against Single Flow Direction (D8) routing at a 120,000 cell threshold:</p>
 
                 <table>
                     <thead>
@@ -127,7 +154,35 @@
                 </table>
 
                 <div class="callout">
-                    <strong>Key Insight:</strong> Changing the routing algorithm from MFD to D8 provided a negligible precision bump (50.9% vs 50.4%). The inherent ceiling limit (~51% recall) points to differences between purely topographic DEM generation and ground-surveyed river vectors, rather than threshold selection. This comparison provides solid evidence for the README methodology section!
+                    <strong>Key Insight:</strong> Changing the routing algorithm from MFD to D8 provided a negligible precision bump (50.9% vs 50.4%). The inherent ceiling limit (~51% recall) points to differences between purely topographic DEM generation and ground-surveyed river vectors, rather than threshold selection.
+                </div>
+            </section>
+
+            <section>
+                <h2>Diagnostic Output Visualizations</h2>
+                <p>Below are the diagnostic outputs generated during the threshold prototyping and overlay evaluation:</p>
+                
+                <div class="image-grid">
+                    <div class="image-card">
+                        <img src="DEM.png" alt="Raw DEM Representation">
+                        <p>Raw DEM Input</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="STREAMS.png" alt="Extracted Stream Network">
+                        <p>Extracted Streams Raster</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="STREAMS5000.png" alt="Low Accumulation Threshold Validation">
+                        <p>Streams (Threshold: 5,000)</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="STREAMS100000.png" alt="Medium Accumulation Threshold Validation">
+                        <p>Streams (Threshold: 100,000)</p>
+                    </div>
+                    <div class="image-card">
+                        <img src="OSRIVER150000.png" alt="OS Open Rivers overlay comparison">
+                        <p>OS Open Rivers Overlay (150,000)</p>
+                    </div>
                 </div>
             </section>
 
