@@ -109,21 +109,21 @@
         <a href="progress.html" class="back-link">← Back to Main Timeline</a>
         
         <header>
-            <h1>Phase 2 Deep-Dive: Sensitivity Analysis & Prototyping</h1>
+            <h1>Sensitivity Analysis & Prototyping</h1>
         </header>
 
         <main>
             <section>
                 <h2>1. What Has Been Completed <span class="badge done">Done</span></h2>
                 <ul>
-                    <li><strong>Data Integration:</strong> Successfully sourced raw regional DEM tiles and reprojected all spatial data frames to standard metric coordinate system (<code>EPSG:27700</code> / British National Grid).</li>
+                    <li><strong>Data Integration:</strong> Sourced raw regional DEM tiles and reprojected all spatial data frames to standard metric coordinate system (<code>EPSG:27700</code> / British National Grid).</li>
                     <li><strong>Bridge Environment Connected:</strong> Established communication between R and QGIS/GRASS via <code>qgisprocess::qgis_configure()</code> utilizing the <code>grass:r.watershed</code> algorithm.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>2. Current Technical Task: Flow Accumulation Prototyping <span class="badge">Active</span></h2>
-                <p>To justify threshold selection prior to running the master batch loop, I ran a thorough sensitivity analysis using a 50m buffer against OS Open Rivers. I benchmarked Multiple Flow Direction (MFD) against Single Flow Direction (D8) routing at a 120,000 cell threshold:</p>
+                <h2>2. Current Task: Flow Accumulation Prototyping <span class="badge">Active</span></h2>
+                <p>To justify threshold selection prior to running the master batch loop, I ran a sensitivity analysis using a 50m buffer against OS Open Rivers. I benchmarked Multiple Flow Direction (MFD) against Single Flow Direction (D8) routing at a 120,000 cell threshold:</p>
 
                 <table>
                     <thead>
@@ -187,10 +187,9 @@
             </section>
 
             <section>
-                <h2>3. Next Immediate Steps</h2>
+                <h2>Next Steps</h2>
                 <ol>
-                    <li><strong>Sink-Filling:</strong> Introduce a sink-filling pre-processing step to prevent artificial drainage interruptions.</li>
-                    <li><strong>Data Filtering:</strong> Filter out estimated connector segments in the OS dataset (<code>fictitious == 0</code>) to establish a cleaner validation baseline.</li>
+                    <li><strong>Data Filtering:</strong> Filter out estimated connector segments in the OS dataset (<code>fictitious == 0</code>) to establish cleaner validation baseline.</li>
                     <li><strong>Script Automation:</strong> Formulate the R function wrapper for <code>qgisprocess</code> and initiate the processing loop over the remaining Cheshire and Greater Manchester DEM files.</li>
                 </ol>
             </section>
