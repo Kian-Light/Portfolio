@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Progress & DevLog | Kian Light</title>
+    <title>Integrated Catchment Characterisation | Kian Light</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Modern, auto-centering timeline container */
@@ -115,28 +115,6 @@
             display: block;
             line-height: 1;
         }
-
-        /* Details Button Link styling */
-        .details-btn {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 15px;
-            padding: 6px 14px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #457b9d;
-            background-color: #f1faee;
-            border: 1px solid #a8dadc;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .details-btn:hover {
-            background-color: #e63946;
-            color: white;
-            border-color: #e63946;
-        }
     </style>
 </head>
 <body>
@@ -153,19 +131,34 @@
     <main style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.6;">
 
         <section id="project-header" style="margin-bottom: 30px;">
-            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #ff4757; font-weight: bold;">🔴 Live Development Tracker</span>
-            <h1 style="margin: 10px 0; font-size: 1.8rem; color: #1a202c;">Current Project Status & DevLog</h1>
-        </section>
-
-        <section style="margin-bottom: 30px;">
-            <h2>Current Focus</h2>
-            <p><strong>Project:</strong> Integrated Catchment Characterisation for Groundwater Vulnerability (R + QGIS)</p>
-            <p>
-                Building a reproducible workflow for automated watershed delineation and stream network extraction using Digital Elevation Model (DEM) data across Cheshire and Greater Manchester. Built in R with integration of QGIS and GRASS GIS tools, the workflow is designed to efficiently process large geospatial datasets and generate model ready hydrological outputs. To characterise hydrological processes and compare conditions across multiple sub-basins, the project calculates key catchment characteristics such as basin area, slope, elevation, drainage density, and Topographic Wetness Index (TWI). Geological and aquifer datasets are incorporated to investigate groundwater vulnerability and recharge potential. The resulting outputs aim to include standardised spatial datasets, catchment statistics, and a cleaned stream network suitable for hydrological modelling. 
+            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #ff4757; font-weight: bold;">Self-Directed Technical Project | In Progress</span>
+            <h1 style="margin: 10px 0; font-size: 1.8rem; color: #1a202c;">Integrated Catchment Characterisation for Groundwater Vulnerability</h1>
+            <p style="font-size: 1.1rem; color: #4a5568; font-style: italic;">
+                Automated watershed delineation, morphometric analysis, and hydrogeological risk profiling | R & QGIS / GRASS Integration
             </p>
         </section>
 
         <section style="margin-bottom: 30px;">
+            <h2>Project Overview & Objectives</h2>
+            <p>
+                This project establishes a fully reproducible, automated geospatial workflow using R and QGIS/GRASS GIS (`qgisprocess`) to delineate watershed boundaries, extract stream networks, and execute catchment morphometric analysis across large Digital Elevation Model (DEM) datasets in Cheshire and Greater Manchester.
+            </p>
+            <p>
+                By integrating topographic indices with geological and aquifer datasets, the project aims to evaluate sub-basin hydrological responses and evaluate spatial patterns in groundwater vulnerability and recharge dynamics.
+            </p>
+            
+            <div style="background: #f7fafc; padding: 18px; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 15px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Core Objectives:</h3>
+                <ol style="margin: 0; padding-left: 20px;">
+                    <li style="margin-bottom: 8px;">Automate seamless multi-tile DEM mosiacing, hydrological conditioning, and <code>r.watershed</code> flow accumulation across regional study areas.</li>
+                    <li style="margin-bottom: 8px;">Quantitatively validate derived stream networks against Ordinance Survey reference data (OS Open Rivers) using precision and recall metrics.</li>
+                    <li style="margin-bottom: 8px;">Derive key sub-basin morphometrics including slope, elevation, Topographic Wetness Index (TWI), Stream Power Index (SPI), and drainage density.</li>
+                    <li>Incorporate hydrogeological layers to construct an integrated groundwater vulnerability matrix across individual catchment sub-basins.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 35px;">
             <h2>Project Phase Progress</h2>
              
             <ul class="timeline">
@@ -285,8 +278,7 @@
         </section>
 
         <section style="margin-bottom: 30px;">
-            <h2>Current Outputs</h2>
-            <p>Artefacts produced so far, generated by the R/QGIS/GRASS workflow described above.</p>
+            <h2>Current Outputs & Generated Artefacts</h2>
             <ul style="padding-left: 20px; line-height: 1.8;">
                 <li>Mosaicked combined DEM covering the 4-tile study area (EPSG:27700, 2m resolution)</li>
                 <li>Combined flow accumulation, drainage direction, basin, stream, TWI, and SPI rasters from a single <code>r.watershed</code> run (threshold = 120,000, MFD routing)</li>
