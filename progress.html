@@ -13,7 +13,7 @@
             padding: 0;
             list-style: none;
         }
-
+ 
         /* Continuous crisp timeline spine */
         .timeline::before {
             content: '';
@@ -25,7 +25,7 @@
             background-color: var(--primary);
             z-index: 1;
         }
-
+ 
         /* Flexbox rows enforce perfect alignment metrics */
         .timeline-item {
             position: relative;
@@ -34,11 +34,11 @@
             gap: 20px;
             margin-bottom: 40px;
         }
-
+ 
         .timeline-item:last-child {
             margin-bottom: 0;
         }
-
+ 
         /* Dedicated container for structural node alignment */
         .timeline-marker {
             position: relative;
@@ -50,7 +50,7 @@
             flex-shrink: 0;
             z-index: 2;
         }
-
+ 
         /* The structural node geometry */
         .timeline-circle {
             width: 12px;
@@ -62,7 +62,7 @@
             box-sizing: border-box;
             transition: all 0.2s ease;
         }
-
+ 
         /* Active focus node style */
         .timeline-item.current .timeline-circle {
             width: 14px;
@@ -70,12 +70,12 @@
             background: #ff4757;
             box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.25);
         }
-
+ 
         /* Layout content adjustments */
         .timeline-content {
             flex-grow: 1;
         }
-
+ 
         .timeline-content h3 {
             margin: 4px 0 8px 0;
             font-size: 1.15rem;
@@ -84,7 +84,7 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
+ 
         .status-badge {
             display: inline-block;
             font-size: 0.70rem;
@@ -96,26 +96,26 @@
             background: #f8fafc;
             color: #64748b;
         }
-
+ 
         .status-badge.active { 
             background: #ffe0e6; 
             color: #ff4757; 
             border-color: #ffa3b1;
         }
-
+ 
         .status-badge.done { 
             background: #d4edda; 
             color: #155724; 
             border-color: #c3e6cb;
         }
-
+ 
         .timestamp {
             font-size: 0.85rem;
             color: var(--text-muted);
             display: block;
             line-height: 1;
         }
-
+ 
         /* Details Button Link styling */
         .details-btn {
             display: inline-flex;
@@ -131,7 +131,7 @@
             text-decoration: none;
             transition: all 0.2s ease-in-out;
         }
-
+ 
         .details-btn:hover {
             background-color: #e63946;
             color: white;
@@ -140,14 +140,14 @@
     </style>
 </head>
 <body>
-
+ 
     <header>
         <h1>Current Project Status & DevLog</h1>
     </header>
-
+ 
     <main style="max-width: 850px; margin: 0 auto; padding: 20px;">
         <p><a href="index.html" style="color: #457b9d; text-decoration: none; font-weight: bold;">← Back to Homepage</a></p>
-
+ 
         <section>
             <h2>Current Focus </h2>
             <p><strong>Project:</strong> Integrated Catchment Characterisation for Groundwater Vulnerability (R + QGIS)</p>
@@ -155,7 +155,7 @@
 Building a reproducible workflow for automated watershed delineation and stream network extraction using Digital Elevation Model (DEM) data across Cheshire and Greater Manchester. Built in R with integration of QGIS and GRASS GIS tools, the workflow is designed to efficiently process large geospatial datasets and generate model ready hydrological outputs. To characterise hydrological processes and compare conditions across multiple sub-basins, the project calculates key catchment characteristics such as basin area, slope, elevation, drainage density, and Topographic Wetness Index (TWI). Geological and aquifer datasets are incorporated to investigate groundwater vulnerability and recharge potential. The resulting outputs aim to include standardised spatial datasets, catchment statistics, and a cleaned stream network suitable for hydrological modelling. 
             </p>
         </section>
-
+ 
         <section>
             <h2>Timeline Roadmap</h2>
              
@@ -170,15 +170,15 @@ Building a reproducible workflow for automated watershed delineation and stream 
                         <h3>Project Scoping <span class="status-badge done">Done</span></h3>
                     </div>
                 </li>
-
-                <li class="timeline-item current">
+ 
+                <li class="timeline-item">
                     <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
+                        <div class="timeline-circle" style="background: #28a745; box-shadow: 0 0 0 2px #28a745;"></div>
                     </div>
                     <div class="timeline-content">
-                        <span class="timestamp">Phase 2 — <strong>In Progress</strong></span>
-                        <h3>Data Sourcing & Terrain Pre-Processing <span class="status-badge active">In Progress</span></h3>
-                        <p>Sourcing DEM tiles for the Cheshire / Greater Manchester study area and reprojecting to a consistent metric CRS (EPSG:27700). Prototyping <code>r.watershed</code> flow accumulation thresholds on a single test basin in QGIS before scripting the loop.</p>
+                        <span class="timestamp">Phase 2 — <strong>Completed</strong></span>
+                        <h3>Data Sourcing & Terrain Pre-Processing <span class="status-badge done">Done</span></h3>
+                        <p>Sourced DEM tiles for the Cheshire / Greater Manchester study area (confirmed already in EPSG:27700). Prototyped <code>r.watershed</code> flow accumulation thresholds against a single test basin in QGIS, then validated threshold selection quantitatively using precision/recall scoring against the OS Open Rivers reference network before scripting the batch loop.</p>
                         
                         <ul style="margin-top: 12px; padding-left: 0; list-style-type: none;">
                             <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
@@ -189,55 +189,78 @@ Building a reproducible workflow for automated watershed delineation and stream 
                                 <span style="color: #28a745; font-weight: bold; margin-right: 8px;">✓</span> 
                                 Reprojected spatial data frames to standard metric CRS (EPSG:27700)
                             </li>
-                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-main); font-weight: 600;">
-                                <span style="color: #ff4757; font-weight: bold; margin-right: 8px;">→</span> 
-                                Prototyping r.watershed flow accumulation parameters in QGIS <span style="font-size: 0.75rem; color: #ff4757; font-style: italic;">(Current Task)</span>
+                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
+                                <span style="color: #28a745; font-weight: bold; margin-right: 8px;">✓</span> 
+                                Prototyped r.watershed flow accumulation parameters in QGIS
                             </li>
                             <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
-                                <span style="color: var(--text-muted); margin-right: 10px;">○</span> 
-                                Scripting the global batch processing loop array
+                                <span style="color: #28a745; font-weight: bold; margin-right: 8px;">✓</span> 
+                                Scripted the global batch processing loop array
                             </li>
                         </ul>
-
+ 
                         <a href="detailed.html" class="details-btn">
                             View Detailed Progress →
                         </a>
                     </div>
                 </li>
-
+ 
                 <li class="timeline-item">
                     <div class="timeline-marker">
-                        <div class="timeline-circle"></div>
+                        <div class="timeline-circle" style="background: #28a745; box-shadow: 0 0 0 2px #28a745;"></div>
                     </div>
                     <div class="timeline-content">
-                        <span class="timestamp">Phase 3 — <strong>Next Step</strong></span>
-                        <h3>Automation via qgisprocess <span class="status-badge">Planned</span></h3>
-
+                        <span class="timestamp">Phase 3 — <strong>Completed</strong></span>
+                        <h3>Automation via qgisprocess <span class="status-badge done">Done</span></h3>
+                        <p>Automated <code>grass:r.watershed</code> processing across multiple DEM tiles using <code>qgisprocess</code>. Identified that tile-by-tile processing fragmented basin IDs at tile boundaries; refined the workflow to mosaic DEM tiles into a single combined raster before running watershed analysis once, eliminating boundary artefacts and substantially improving precision/recall against the reference river network (59.8% precision, 71.8% recall on the combined 4-tile study area).</p>
                     </div>
                 </li>
-
-                <li class="timeline-item">
+ 
+                <li class="timeline-item current">
                     <div class="timeline-marker">
                         <div class="timeline-circle"></div>
                     </div>
                     <div class="timeline-content">
-                        <span class="timestamp">Phase 4 — <strong>Future Milestone</strong></span>
-                        <h3>Morphometric Parameter Calculations <span class="status-badge">Planned</span></h3>
-
+                        <span class="timestamp">Phase 4 — <strong>In Progress</strong></span>
+                        <h3>Morphometric Parameter Calculations <span class="status-badge active">In Progress</span></h3>
+                        <p>Calculating per-sub-basin morphometric statistics from the combined watershed outputs, compiled into a standardised data frame for downstream analysis.</p>
+ 
+                        <ul style="margin-top: 12px; padding-left: 0; list-style-type: none;">
+                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
+                                <span style="color: #28a745; font-weight: bold; margin-right: 8px;">✓</span> 
+                                Calculated mean slope, mean elevation, TWI, and SPI per basin
+                            </li>
+                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
+                                <span style="color: #28a745; font-weight: bold; margin-right: 8px;">✓</span> 
+                                Calculated basin area and compiled a standardised morphometric data frame
+                            </li>
+                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-main); font-weight: 600;">
+                                <span style="color: #ff4757; font-weight: bold; margin-right: 8px;">→</span> 
+                                Vectorising basins and stream network to sf polygon/line objects <span style="font-size: 0.75rem; color: #ff4757; font-style: italic;">(Current Task)</span>
+                            </li>
+                            <li style="margin-bottom: 5px; font-size: 0.88rem; color: var(--text-muted);">
+                                <span style="color: var(--text-muted); margin-right: 10px;">○</span> 
+                                Calculating drainage density per basin
+                            </li>
+                        </ul>
+ 
+                        <a href="detailed.html" class="details-btn">
+                            View Detailed Progress →
+                        </a>
                     </div>
                 </li>
-
+ 
                 <li class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-circle"></div>
                     </div>
                     <div class="timeline-content">
-                        <span class="timestamp">Phase 5 — <strong>Future Milestone</strong></span>
+                        <span class="timestamp">Phase 5 — <strong>Next Step</strong></span>
                         <h3>Hydrogeological Matrix & Groundwater Analytics <span class="status-badge">Planned</span></h3>
-
+ 
                     </div>
                 </li>
-
+ 
                 <li class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-circle"></div>
@@ -245,10 +268,10 @@ Building a reproducible workflow for automated watershed delineation and stream 
                     <div class="timeline-content">
                         <span class="timestamp">Phase 6 — <strong>Future Milestone</strong></span>
                         <h3>Recharge Zoning & Land Use Integration <span class="status-badge">Planned</span></h3>
-
+ 
                     </div>
                 </li>
-
+ 
                 <li class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-circle"></div>
@@ -256,14 +279,14 @@ Building a reproducible workflow for automated watershed delineation and stream 
                     <div class="timeline-content">
                         <span class="timestamp">Phase 7 — <strong>Final Deliverable</strong></span>
                         <h3>Model Ready Verification & Portfolio Deployment <span class="status-badge">Planned</span></h3>
-
+ 
                     </div>
                 </li>
-
+ 
             </ul>
         </section>
-
+ 
     </main>
-
+ 
 </body>
 </html>
