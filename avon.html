@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Avon Water Quality Assessment | Kian Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kian Light</h1>
+        <p style="margin: 10px 0 0 0; font-size: 0.95rem; opacity: 0.85;">
+            <a href="index.html" style="color: white; text-decoration: underline;">← Back to Portfolio</a> &nbsp;|&nbsp; 
+            Cheshire, UK &nbsp;|&nbsp; 
+            <a href="mailto:kian.light@hotmail.com" style="color: white; text-decoration: underline;">kian.light@hotmail.com</a>
+        </p>
+    </header>
+
+    <main style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.6;">
+
+        <section id="project-header" style="margin-bottom: 30px;">
+            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: bold;">BSc (Hons) Undergraduate Dissertation</span>
+            <h1 style="margin: 10px 0; font-size: 1.8rem; color: #1a202c;">Landscape Composition, Configuration, and Cumulative Pollution Along an Urban River Continuum</h1>
+            <p style="font-size: 1.1rem; color: #4a5568; font-style: italic;">
+                A spatial and temporal analysis of the River Avon (Bristol) catchment | University of Bristol
+            </p>
+        </section>
+
+        <section style="background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 6px solid #22c55e; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+            <h3 style="margin: 0 0 10px 0; color: #15803d; display: flex; align-items: center; gap: 8px;">
+                <span>🎓</span> Academic Evaluator Highlights
+            </h3>
+            <ul style="margin: 0; padding-left: 20px; color: #14532d; font-size: 0.95rem;">
+                <li style="margin-bottom: 8px;">
+                    <em>"An ambitious dissertation that attempts to tackle the question of pollution in the River Avon through the lens of landscape composition and configuration. This is a novel component which goes beyond standard undergraduate approaches."</em> — <strong>Dissertation Second Marker</strong>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <em>"The landscape composition, configuration, fragmentation and connectivity discussion is a highlight! ... The use of landscape metrics adds an interesting dimension to the research."</em> — <strong>Dissertation First Marker</strong>
+                </li>
+                <li>
+                    <em>"Demonstrates good engagement with the literature demonstrating good understanding of processes and controls on river water quality."</em> — <strong>Faculty Review Board</strong>
+                </li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom: 30px;">
+            <h2>Executive Summary</h2>
+            <p>
+                Surface water quality in river systems is governed by a combination of natural processes and anthropogenic pressures. While traditional hydrological research positions landscape <em>composition</em> (land cover proportions) as the primary explanatory variable, it frequently fails to capture the spatial <em>configuration</em> (fragmentation, patchiness, and connectivity) of land cover.
+            </p>
+            <p>
+                This project integrated empirical field monitoring, laboratory hydrochemical analysis, long-term secondary datasets obtained via Freedom of Information (FOI) requests, and FRAGSTATS spatial metrics to examine spatial and temporal water quality dynamics across the low-gradient, multi-urban River Avon catchment.
+            </p>
+        </section>
+
+        <section style="margin-bottom: 30px;">
+            <h2>Core Research Questions</h2>
+            <div style="background: #f7fafc; padding: 18px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <ol style="margin: 0; padding-left: 20px;">
+                    <li style="margin-bottom: 8px;"><strong>RQ1:</strong> How well do spatial landscape metrics explain variation in surface water quality across the River Avon catchment?</li>
+                    <li style="margin-bottom: 8px;"><strong>RQ2:</strong> Which specific water quality indicators (e.g., DO, EC, nutrients) exhibit the greatest sensitivity to landscape patterns?</li>
+                    <li><strong>RQ3:</strong> Is there significant seasonal variation in water quality across sample sites along the urban river continuum?</li>
+                </ol>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 35px;">
+            <h2>Catchment Spatial Extent & Sample Locations</h2>
+            <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+                <img src="sample_sites_diss.png" alt="Map showing primary and secondary water quality sampling sites across the River Avon catchment" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #edf2f7;">
+                <p style="margin-top: 10px; font-size: 0.88rem; color: #718096; font-style: italic;">
+                    <strong>Figure 1:</strong> Spatial distribution of primary empirical field sampling locations and long-term secondary sampling locations across the River Avon catchment.
+                </p>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 30px;">
+            <h2>Methodology & Analytical Pipeline</h2>
+            <ul style="line-height: 1.8;">
+                <li><strong>Primary Field & Lab Sampling:</strong> Collected surface water samples across 10 locations in the River Avon catchment and Bristol Harbour. Measured in-situ parameters (DO, pH, EC, temperature) and laboratory parameters (<em>E. coli</em>, BOD<sub>7</sub>, turbidity, total nitrates, total phosphates).</li>
+                <li><strong>Secondary Data Parsing:</strong> Obtained 20 years of historical water quality data via FOI from Bristol City Council, filtering for consistent temporal subsets in 2013 and 2018.</li>
+                <li><strong>Adapted Water Quality Index (NSFWQI):</strong> Derived parameter sub-indices using non-linear curve fitting to calculate standardized 9-parameter (primary) and 7-parameter (secondary) NSFWQI metrics.</li>
+                <li><strong>GIS & FRAGSTATS Spatial Analysis:</strong> Calculated compositional metrics (Percentage Cover) and configurational metrics (Aggregation Index, Interspersion & Juxtaposition Index, Shannon's Diversity Index, Patch Richness Density) across variable riparian buffer zones using UKCEH Land Cover Maps.</li>
+                <li><strong>Statistical Modelling:</strong> Conducted Spearman's rank correlation, Multiple Linear Regression (MLR), Redundancy Analysis (RDA), and spatial autocorrelation testing (Moran's <em>I</em>).</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom: 35px;">
+            <h2>Riparian Buffer & Land Cover Extraction</h2>
+            <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+                <img src="buffer_example.png" alt="Example of spatial buffer zone and surrounding land use metrics extraction" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #edf2f7;">
+                <p style="margin-top: 10px; font-size: 0.88rem; color: #718096; font-style: italic;">
+                    <strong>Figure 2:</strong> Representative spatial buffer delineation around a sampling point, illustrating landscape composition and configuration extraction across distinct land use classes.
+                </p>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 30px;">
+            <h2>Key Findings & Insights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px;">
+                <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
+                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Urban Cover Dominance</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Urban land cover emerged as the dominant multivariate driver of water quality degradation, explaining <strong>42.55%</strong> of overall water quality variation ($p = 0.021$).</p>
+                </div>
+                <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
+                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Suburban Composition</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Suburban percentage cover was a significant predictor in secondary datasets ($\rho = -0.893$, $p = 0.012$), reflecting diffuse runoff and private drainage impacts.</p>
+                </div>
+                <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
+                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Indicator Sensitivity</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Dissolved Oxygen (DO) was the most sensitive pairwise indicator, showing strong negative correlation with urban cover ($\rho = -0.890$). Electrical Conductivity (EC) was most responsive in multivariate space.</p>
+                </div>
+                <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
+                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Urban River Continuum</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Lack of seasonal signal across most sites reinforced that continuous urban point-source inputs mask natural seasonal fluctuations across the catchment continuum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 40px;">
+            <h2>Applied Technical Competencies</h2>
+            <p>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">QGIS</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">R Statistical Computing</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">FRAGSTATS / Landscape Metrics</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Hydrochemical Field Sampling</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Laboratory Microbiology & BOD Testing</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Spatial Autocorrelation (Moran's I)</span>
+            </p>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 20px; font-size: 0.85rem; color: #718096; border-top: 1px solid #e2e8f0;">
+        <p>&copy; Kian Light | Geography BSc (Hons), University of Bristol</p>
+    </footer>
+
+</body>
+</html>
