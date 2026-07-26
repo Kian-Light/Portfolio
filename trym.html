@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microplastic Contamination Investigation | Kian Light</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { color: #1e293b; margin-bottom: 5px; }
+        h2 { color: #334155; margin-top: 30px; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        h3 { color: #475569; margin-top: 0; }
+        
+        .back-link {
+            color: #457b9d;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .meta-info {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .meta-item {
+            background: #e2e8f0;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* Stat callout box */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #457b9d;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-card .number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .stat-card .label {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Image Display Grid */
+        .image-container {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 25px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #f1f5f9;
+        }
+        .image-container p {
+            margin: 12px 0 0 0;
+            font-size: 0.88rem;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        /* Skills Tags */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-left: 0;
+            list-style: none;
+            margin-top: 15px;
+        }
+        .skill-tag {
+            background-color: #f1f5f9;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .callout {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        code {
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <header>
+            <h1>Microplastic Contamination & Water Quality along the River Trym</h1>
+            <div class="meta-info">
+                <span class="meta-item">Group Research Project</span>
+                <span class="meta-item">September – December 2025</span>
+                <span class="meta-item">Stakeholder: Trout in the Trym</span>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>Project Overview</h2>
+                <p>
+                    <strong>Trout in the Trym</strong> is a local volunteer group dedicated to restoring the River Trym and enhancing its natural habitat. While the group possesses the capacity to regularly monitor general water quality metrics, they lack the technical resources required to directly quantify microplastic concentrations.
+                </p>
+                <p>
+                    This applied research project was conducted to establish baseline data on microplastic pollution within the catchment, evaluate spatial distributions relative to infrastructure inputs, and test potential proxy variables for monitoring.
+                </p>
+            </section>
+
+            <section>
+                <h2>Research Questions</h2>
+                <ol>
+                    <li>Are microplastics present in the River Trym’s sediment or water column? If present, what is their spatial distribution?</li>
+                    <li>Is microplastic concentration related to specific infrastructure inputs—namely Combined Sewage Overflow (CSO) discharge points?</li>
+                    <li>Can other standard water quality indicators be used as a reliable proxy measurement for microplastic concentrations?</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Laboratory & Quantification Method</h2>
+                <div class="image-container">
+                    <img src="mp.png" alt="Microplastic (MP) quantification using Nile Red fluorescent dye">
+                    <p>Microplastic (MP) quantification using Nile Red fluorescent dye. Filter paper photographed under UV light enabling manual counting of MP particles.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Findings</h2>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="number">27.6 MP/g</div>
+                        <div class="label">Mean Concentration</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">0 – 113.5 MP/g</div>
+                        <div class="label">Observed Range</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">18%</div>
+                        <div class="label">CSO Variance Explained</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>Spatial Distribution:</strong> Microplastic concentrations exhibited significant spatial variation across sampling sites (ranging from <code>0 MP/g</code> to <code>113.48 MP/g</code>). A one-way ANOVA confirmed that sampling site location contributed substantially to overall variance.</li>
+                    <li><strong>CSO Proximity Relationship:</strong> A linear regression modeling microplastic concentration against downstream distance from CSOs yielded a minor positive coefficient (0.0125). Although downstream distance explained 18% of variance, the relationship was not statistically significant.</li>
+                    <li><strong>Proxy Evaluation:</strong> Kendall’s rank correlation tests revealed that Electrical Conductivity served as a moderate positive proxy, while Dissolved Oxygen showed a weak positive association. Other indicators—including pH, <em>E. coli</em>, nutrients, and Total Organic Carbon (TOC)—demonstrated no statistically significant relationship.</li>
+                </ul>
+
+                <div class="callout">
+                    <strong>Stakeholder Recommendation:</strong> Proxy variables cannot reliably replace direct microplastic measurements. Results were communicated directly to Trout in the Trym to establish a baseline data framework and inform ongoing river monitoring and management initiatives.
+                </div>
+            </section>
+
+            <section>
+                <h2>Methodology & Analytical Pipeline</h2>
+                <ul>
+                    <li><strong>Data Integration:</strong> Compiled field probe data (pH, EC, DOC) and laboratory metrics (<em>E. coli</em>, nutrient analysis, microplastic counts) into a unified dataset in R.</li>
+                    <li><strong>Exploratory Data Analysis:</strong> Checked parametric assumptions via statistical normality testing across primary and secondary datasets.</li>
+                    <li><strong>Statistical Modeling:</strong> Evaluated site variation via one-way ANOVA, modeled CSO spatial relationships with linear regression, and visualised mean trends using <code>ggplot2</code> in R.</li>
+                    <li><strong>Spatial & Interactive Mapping:</strong> Converted sample sites and CSO locations into spatial objects using the <code>sf</code> package and generated an interactive web map with <code>Leaflet</code>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Skills Demonstrated</h2>
+                <ul class="skills-list">
+                    <li class="skill-tag">Field Sampling & Laboratory Analysis</li>
+                    <li class="skill-tag">E. coli & Nutrient Analysis</li>
+                    <li class="skill-tag">Exploratory Data Analysis (R)</li>
+                    <li class="skill-tag">Interactive Mapping (sf / Leaflet)</li>
+                    <li class="skill-tag">Stakeholder Communication</li>
+                    <li class="skill-tag">Applied Environmental Research</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
