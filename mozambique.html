@@ -40,7 +40,7 @@
         <section style="margin-bottom: 30px;">
             <h2>Summary</h2>
             <p>
-                In February and March 2023, Tropical Cyclone Freddy made an unprecedented secondary landfall in Mozambique, causing severe flooding across major river basins. As part of a BSc summative assessment in <em>Environmental Risks and Disaster Risk Reduction</em> (GEOG30041), this project simulated a rapid response emergency workflow designed to inform FCDO humanitarian planners. The task involved processing 51 probabilistic GloFAS ensemble forecast runs, executing spatial zonal statistics in QGIS, and compiling a concise 3 page briefing on district level population and infrastructure exposure.
+                In February and March 2023, Tropical Cyclone Freddy made an unprecedented secondary landfall in Mozambique, causing severe flooding across major river basins. As part of a BSc summative assessment in <em>Environmental Risks and Disaster Risk Reduction</em> (GEOG30041), this project simulated a rapid response emergency workflow designed to inform FCDO humanitarian planners. The task involved processing 51 probabilistic GloFAS ensemble members, zonal statistics in QGIS, and compiling a concise 3 page briefing on district level population and infrastructure exposure.
             </p>
         </section>
 
@@ -50,7 +50,7 @@
                 <ol style="margin: 0; padding-left: 20px;">
                     <li style="margin-bottom: 8px;">What is the spatial extent and district level population exposure forecast across Mozambique during Cyclone Freddy's second landfall?</li>
                     <li style="margin-bottom: 8px;">How does probabilistic uncertainty across 51 GloFAS ensemble members impact risk estimation for critical infrastructure (road and rail networks)?</li>
-                    <li>What actionable recommendations can be communicated to emergency decision makers to prioritize disaster risk reduction and humanitarian aid deployment?</li>
+                    <li>What actionable recommendations can be communicated to emergency decision makers to prioritise disaster risk reduction and humanitarian aid deployment?</li>
                 </ol>
             </div>
         </section>
@@ -58,10 +58,10 @@
         <section style="margin-bottom: 30px;">
             <h2>Methodology</h2>
             <ul style="line-height: 1.8;">
-                <li><strong>Ensemble Forecast Parsing:</strong> Processed 51 probabilistic ensemble forecast runs from the Global Flood Awareness System (GloFAS) using R to evaluate flood inundation thresholds and statistical confidence bounds (mean vs. 90th percentile).</li>
+                <li><strong>Ensemble Forecast Parsing:</strong> Processed 51 probabilistic ensemble members from the Global Flood Awareness System (GloFAS) using R to evaluate flood inundation thresholds and statistical confidence bounds (mean vs. 90th percentile).</li>
                 <li><strong>GIS Spatial Zonal Statistics:</strong> Applied spatial overlays and zonal statistics in QGIS against WorldPop high resolution population rasters and administrative boundaries (GADM) to quantify district level exposure.</li>
                 <li><strong>Critical Infrastructure Exposure Analysis:</strong> Overlayed flood extent polygons with OpenStreetMap transportation layers to identify vulnerable primary road corridors and key railway links.</li>
-                <li><strong>Academic Briefing Synthesis:</strong> Synthesized complex hydrometeorological modeling outputs into a succinct 3 page emergency bulletin tailored for operational disaster response communication.</li>
+                <li><strong>Academic Briefing Synthesis:</strong> Synthesised complex hydrometeorological modeling outputs into a succinct 3 page emergency bulletin tailored for operational disaster response communication.</li>
             </ul>
         </section>
 
@@ -69,12 +69,12 @@
             <h2>Key Findings & Outputs</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px;">
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
-                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Peak Population Exposure</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">Up to <strong>478,482 people</strong> were projected to be exposed to flooding across 123 districts under the 90th percentile ensemble upper bound.</p>
+                    <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Population Exposure</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Up to <strong>478,482 people</strong> were projected to be exposed to flooding across 123 districts under the 90th percentile.</p>
                 </div>
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
                     <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Highest Risk Districts</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Marromeu District</strong> was identified as the highest risk region, with mean estimated exposure of 44,785 people (escalating to 79,549 at the 90th percentile).</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Marromeu District</strong> was identified as the highest risk region, with mean estimated exposure of 44,785 people (increasing to 79,549 at the 90th percentile).</p>
                 </div>
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
                     <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Infrastructure Disruption</h3>
