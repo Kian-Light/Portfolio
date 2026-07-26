@@ -20,37 +20,37 @@
     <main style="max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.6;">
 
         <section id="project-header" style="margin-bottom: 30px;">
-            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: bold;">GEOG30041 Summative Assessment | March 2023</span>
+            <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: bold;">BSc Summative Assessment | March 2023</span>
             <h1 style="margin: 10px 0; font-size: 1.8rem; color: #1a202c;">Flood Exposure & Risk Mapping: Tropical Cyclone Freddy (Mozambique)</h1>
             <p style="font-size: 1.1rem; color: #4a5568; font-style: italic;">
-                Rapid emergency forecasting bulletin & impact assessment | University of Bristol
+                Simulated emergency forecasting bulletin & impact assessment | University of Bristol
             </p>
         </section>
 
         <section style="background: #ebf8ff; border: 1px solid #bae6fd; border-left: 6px solid #0284c7; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
             <div>
-                <h3 style="margin: 0 0 5px 0; color: #0369a1;">View Full Emergency Bulletin</h3>
+                <h3 style="margin: 0 0 5px 0; color: #0369a1;">📄 View Full Emergency Bulletin Assessment</h3>
                 <p style="margin: 0; color: #0c4a6e; font-size: 0.95rem;">
-                    Access the complete 3 page emergency briefing PDF prepared for FCDO and partner humanitarian response teams.
+                    Access the complete 3-page emergency briefing PDF produced for a BSc assessment simulating FCDO decision-support reporting.
                 </p>
             </div>
-            <a href="Bulletin.pdf" target="_blank" style="background: #0284c7; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; white-space: nowrap;">Open Bulletin PDF →</a>
+            <a href="bulletin.pdf" target="_blank" style="background: #0284c7; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; white-space: nowrap;">Open Bulletin PDF →</a>
         </section>
 
         <section style="margin-bottom: 30px;">
             <h2>Summary</h2>
             <p>
-                In February and March 2023, Tropical Cyclone Freddy made an unprecedented secondary landfall in Mozambique, causing severe inland flooding across major river basins. To support humanitarian response partners (including FCDO), this project involved parsing 51 probabilistic GloFAS ensemble forecasts, executing spatial zonal statistics in QGIS, and compiling a concise, 3-page emergency decision-support briefing detailing district-level population and infrastructure exposure.
+                In February and March 2023, Tropical Cyclone Freddy made an unprecedented secondary landfall in Mozambique, causing severe flooding across major river basins. As part of a BSc summative assessment in <em>Environmental Risks and Disaster Risk Reduction</em> (GEOG30041), this project simulated a rapid-response emergency workflow designed to inform FCDO humanitarian planners. The task involved processing 51 probabilistic GloFAS ensemble forecast runs, executing spatial zonal statistics in QGIS, and compiling a concise 3-page briefing on district-level population and infrastructure exposure.
             </p>
         </section>
 
         <section style="margin-bottom: 30px;">
-            <h2>Research & Forecasting Questions</h2>
+            <h2>Assessment Research Questions</h2>
             <div style="background: #f7fafc; padding: 18px; border-radius: 8px; border: 1px solid #e2e8f0;">
                 <ol style="margin: 0; padding-left: 20px;">
                     <li style="margin-bottom: 8px;">What is the spatial extent and district-level population exposure forecast across Mozambique during Cyclone Freddy's second landfall?</li>
                     <li style="margin-bottom: 8px;">How does probabilistic uncertainty across 51 GloFAS ensemble members impact risk estimation for critical infrastructure (road/rail networks)?</li>
-                    <li>What actionable recommendations can be communicated to emergency planners to prioritize disaster risk reduction and humanitarian aid deployment?</li>
+                    <li>What actionable recommendations can be communicated to emergency decision-makers to prioritize disaster risk reduction and humanitarian aid deployment?</li>
                 </ol>
             </div>
         </section>
@@ -59,14 +59,14 @@
             <h2>Methodology</h2>
             <ul style="line-height: 1.8;">
                 <li><strong>Ensemble Forecast Parsing:</strong> Processed 51 probabilistic ensemble forecast runs from the Global Flood Awareness System (GloFAS) using R to evaluate flood inundation thresholds and statistical confidence bounds (mean vs. 90th percentile).</li>
-                <li><strong>GIS Spatial Zonal Statistics:</strong> Applied spatial overlays and zonal statistics in QGIS against WorldPop high-resolution population rasters and administrative boundaries (GADM) to quantify district exposure.</li>
+                <li><strong>GIS Spatial Zonal Statistics:</strong> Applied spatial overlays and zonal statistics in QGIS against WorldPop high-resolution population rasters and administrative boundaries (GADM) to quantify district-level exposure.</li>
                 <li><strong>Critical Infrastructure Exposure Analysis:</strong> Overlayed flood extent polygons with OpenStreetMap transportation layers to identify vulnerable primary road corridors and key railway links.</li>
-                <li><strong>Humanitarian Communication:</strong> Synthesized complex hydrometeorological modeling outputs into a succinct, accessible emergency bulletin designed for immediate operational use by humanitarian decision-makers.</li>
+                <li><strong>Academic Briefing Synthesis:</strong> Synthesized complex hydrometeorological modeling outputs into a succinct 3-page emergency bulletin tailored for operational disaster response communication.</li>
             </ul>
         </section>
 
         <section style="margin-bottom: 30px;">
-            <h2>Key Findings</h2>
+            <h2>Key Findings & Outputs</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px;">
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
                     <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Peak Population Exposure</h3>
@@ -78,11 +78,11 @@
                 </div>
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
                     <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Infrastructure Disruption</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">Severe vulnerability was mapped along key transit lines, indicating high risk of isolated communities due to road inundation and rail line washouts.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Severe vulnerability was mapped along key transit lines, highlighting high risk of isolated communities due to road inundation and rail line washouts.</p>
                 </div>
                 <div style="border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; background: #fff;">
                     <h3 style="margin-top: 0; font-size: 1.05rem; color: #2b6cb0;">Forecasting Uncertainty</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 0;">Highlighted the critical divergence between ensemble mean and 90th percentile bounds to prevent under-preparedness in humanitarian aid allocation.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Highlighted the critical divergence between ensemble mean and 90th percentile bounds to prevent under-preparedness in simulated emergency aid allocation.</p>
                 </div>
             </div>
         </section>
@@ -94,7 +94,7 @@
                 <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">GloFAS Ensemble Data Analysis (R)</span>
                 <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Flood Risk & Vulnerability Mapping</span>
                 <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Disaster Risk Governance</span>
-                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Emergency Bulletin Communication</span>
+                <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; margin-right: 5px;">Emergency Bulletin Reporting</span>
             </p>
         </section>
 
